@@ -50,6 +50,10 @@ const vaportext = {
 					}
 				},
 				{
+					label: 'esrever',
+					action: text => text.split('').reverse().join('')
+				},
+				{
 					label: '★ Black stars ★',
 					action: text => vaportext.surroundString(text, '★')
 				},
@@ -60,6 +64,10 @@ const vaportext = {
 				{
 					label: 'nospaces',
 					action: text => text.split(' ').join('')
+				},
+				{
+					label: '[quote]text[/quote]',
+					action: text => '[quote]' + text + '[/quote]'
 				}
 			]
 		},
