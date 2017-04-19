@@ -32,14 +32,14 @@ const vaportext = {
 				},
 				{
 					label: 'S p a c e   l e t t e r s',
-					action: text => text.split('').join(' ')
+					action: text => [...text].join(' ')
 				},
 				{
 					label: 'Unspace letters',
 					action: text => {
 						let remove = false;
 
-						return text.split('').map(char => {
+						return [...text].map(char => {
 							if (remove && char === ' ') {
 								remove = false;
 								return '';
@@ -52,7 +52,7 @@ const vaportext = {
 				},
 				{
 					label: 'esrever',
-					action: text => text.split('').reverse().join('')
+					action: text => [...text].reverse().join('')
 				},
 				{
 					label: '★ Black stars ★',
