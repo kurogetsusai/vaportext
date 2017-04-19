@@ -4,6 +4,7 @@
 // @description Adds a menu to transform text in any text inputs.
 // @version     0.1.0
 // @grant       none
+// @updateURL   https://github.com/kurogetsusai/vaportext/raw/master/vaportext.user.js
 // ==/UserScript==
 
 'use strict';
