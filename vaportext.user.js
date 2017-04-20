@@ -2,7 +2,8 @@
 // @name        Vaportext
 // @namespace   vaportext
 // @description Adds a menu to transform text in any text inputs.
-// @version     0.1.0
+// @version     0.1.1
+// @include     *
 // @grant       none
 // @updateURL   https://github.com/kurogetsusai/vaportext/raw/master/vaportext.user.js
 // ==/UserScript==
@@ -115,6 +116,8 @@ const vaportext = {
 .vaportextMenuItem pre {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0);
 	text-align: center;
 	font-family: monospace;
 	font-size: 1.2em;
@@ -167,7 +170,7 @@ const vaportext = {
 			this.state.elements.menu.items.push(menuItem);
 		});
 
-		document.body.onkeypress = event => {
+		document.body.onkeydown = event => {
 			if (event.key === this.state.triggerKey)
 				switch (event.target.tagName) {
 				case 'BODY':
